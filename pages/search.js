@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import { useRouter } from 'next/router'
 import { format } from 'date-fns'
 import InfoCard from '../components/InfoCard'
+import Map from '../components/Map'
 function Search({ searchData }) {
   const router = useRouter()
   const { location, startDate, endDate, noOfGuests } = router.query
@@ -50,6 +51,9 @@ function Search({ searchData }) {
               )
             )}
           </div>
+        </section>
+        <section className="min-w-[600px]">
+          <Map searchData={searchData} />
         </section>
       </main>
       <Footer />
