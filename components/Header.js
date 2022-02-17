@@ -30,10 +30,10 @@ function Header({ placeholder }) {
   }
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-2 bg-white p-5 shadow-md md:grid-cols-3 md:px-10">
+    <header className="sticky top-0 z-50 grid grid-cols-1 bg-white p-5 shadow-md md:grid-cols-3 md:px-10">
       <div
         onClick={() => router.push('/')}
-        className="relative my-auto flex h-10 cursor-pointer items-center"
+        className="relative my-auto hidden h-10 cursor-pointer items-center md:inline-flex"
       >
         <Image
           src="https://links.papareact.com/qd3"
@@ -49,10 +49,10 @@ function Header({ placeholder }) {
           className="flex-grow bg-transparent pl-5 text-sm text-gray-600 focus:outline-none"
           placeholder={placeholder}
         ></input>
-        <SearchIcon className="  h-6 cursor-pointer rounded-full bg-red-400 p-1 text-white md:h-8 md:p-2 " />
+        <SearchIcon className="  h-6 cursor-pointer rounded-full bg-red-400 p-1 text-white lg:h-8 lg:p-2 " />
       </div>
-      <div className=" flex hidden items-center justify-end space-x-4 text-gray-500 md:inline-flex ">
-        <p className="">Become a host</p>
+      <div className=" hidden items-center justify-end space-x-4 text-gray-500 md:inline-flex ">
+        <p className="sm:hidden lg:inline-flex">Become a host</p>
         <GlobeAltIcon className="h-6 cursor-pointer " />
         <div className="flex  items-center space-x-2 rounded-full border-2 p-2 ">
           <MenuIcon className="h-6 cursor-pointer" />
